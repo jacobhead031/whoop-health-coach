@@ -1,0 +1,12 @@
+.env
+tokens.json
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+logs/
+deck.html
+weekly-deck.pdf
+calories.csv
+weight.csv
+recs-history.md

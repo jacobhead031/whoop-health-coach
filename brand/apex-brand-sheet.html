@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="apex.css">
+<style>
+  .slide{all:unset}
+  .day .bar{flex:none}
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; background: #0B0F14; }
+  body {
+    height: 1700px; position: relative; overflow: hidden;
+    font-family: 'Instrument Sans', sans-serif; color: #EDF2F7;
+    padding: 88px 96px;
+  }
+  .mono { font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.18em;
+          color: #94A3B2; text-transform: uppercase; }
+  .rule { border: none; border-top: 1px solid #1F2933; }
+
+  /* header */
+  .head { display: flex; justify-content: space-between; align-items: baseline; }
+  .doc-no { color: #4A5866; }
+
+  /* hero mark */
+  .hero { margin-top: 96px; display: flex; align-items: center; gap: 72px; }
+  .hero svg.mark { width: 300px; height: 300px; flex: none; }
+  .wordmark { font-family: 'Big Shoulders'; font-weight: 700; font-size: 190px;
+              line-height: 0.9; letter-spacing: 0.04em; }
+  .wordsub { font-family: 'Geist Mono', monospace; font-size: 15px; letter-spacing: 0.62em;
+             color: #2EE6A8; margin-top: 22px; }
+  .tagline { font-size: 17px; color: #94A3B2; margin-top: 26px; letter-spacing: 0.02em; }
+
+  /* sections */
+  .section { margin-top: 78px; }
+  .section .label { margin-bottom: 26px; display: flex; align-items: center; gap: 16px; }
+  .section .label hr { flex: 1; }
+
+  /* palette */
+  .chips { display: flex; gap: 18px; }
+  .chip { flex: 1; height: 150px; border-radius: 10px; position: relative;
+          border: 1px solid #1F2933; }
+  .chip .name { position: absolute; left: 14px; bottom: 34px; font-size: 11px;
+                font-family: 'Geist Mono', monospace; letter-spacing: 0.14em; }
+  .chip .hex  { position: absolute; left: 14px; bottom: 14px; font-size: 11px;
+                font-family: 'Geist Mono', monospace; color: #94A3B2; }
+  .chip.light .name { color: #0B0F14; } .chip.light .hex { color: #33404E; }
+
+  /* type specimen */
+  .spec { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; align-items: end; }
+  .spec .big { font-family: 'Big Shoulders'; font-weight: 700; font-size: 128px;
+               line-height: 0.9; color: #2EE6A8; }
+  .spec .mid { font-size: 20px; line-height: 1.4; }
+  .spec .sml { font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.2em;
+               color: #94A3B2; line-height: 2.1; text-transform: uppercase; }
+  .spec .cap { margin-top: 14px; }
+
+  /* seven-day motif */
+  .week { display: flex; gap: 26px; align-items: flex-end; height: 170px; }
+  .day { flex: 1; display: flex; flex-direction: column; justify-content: flex-end;
+         gap: 10px; height: 100%; }
+  .day .bar { border-radius: 5px 5px 2px 2px; background: #1F2933; }
+  .day.on .bar { background: #2EE6A8; }
+  .day.warn .bar { background: #FF7A6B; }
+  .day .d { text-align: center; font-family: 'Geist Mono', monospace; font-size: 11px;
+            color: #4A5866; letter-spacing: 0.1em; }
+
+  /* footer */
+  .foot { position: absolute; left: 96px; right: 96px; bottom: 72px;
+          display: flex; justify-content: space-between; align-items: baseline; }
+</style>
+</head>
+<body>
+
+  <div class="head">
+    <span class="mono">Summit Instrument — Identity Record</span>
+    <span class="mono doc-no">SI-001 / 2026</span>
+  </div>
+  <hr class="rule" style="margin-top:20px">
+
+  <div class="hero">
+    <svg class="mark" viewBox="0 0 96 96" fill="none">
+      <polyline points="10,79 33,57 47,66 82,22" stroke="#2EE6A8" stroke-width="8"
+                stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="82" cy="22" r="7.5" fill="#EDF2F7"/>
+      <line x1="10" y1="90" x2="86" y2="90" stroke="#2A3542" stroke-width="3"
+            stroke-linecap="round"/>
+    </svg>
+    <div>
+      <div class="wordmark">APEX</div>
+      <div class="wordsub">C O A C H I N G</div>
+      <div class="tagline">Every week, measured. Every ascent, earned.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label"><span class="mono">01 — Color is a verdict</span><hr class="rule"></div>
+    <div class="chips">
+      <div class="chip" style="background:#0B0F14"><span class="name" style="color:#EDF2F7">NIGHT GROUND</span><span class="hex">#0B0F14</span></div>
+      <div class="chip" style="background:#131A22"><span class="name" style="color:#EDF2F7">STATION</span><span class="hex">#131A22</span></div>
+      <div class="chip light" style="background:#EDF2F7"><span class="name">CHALK</span><span class="hex">#EDF2F7</span></div>
+      <div class="chip" style="background:#94A3B2"><span class="name" style="color:#0B0F14">THIN AIR</span><span class="hex" style="color:#33404E">#94A3B2</span></div>
+      <div class="chip" style="background:#2EE6A8"><span class="name" style="color:#0B0F14">APEX GREEN</span><span class="hex" style="color:#0E4D38">#2EE6A8</span></div>
+      <div class="chip" style="background:#FF7A6B"><span class="name" style="color:#0B0F14">EMBER</span><span class="hex" style="color:#5C1F18">#FF7A6B</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label"><span class="mono">02 — One monument, whispered notation</span><hr class="rule"></div>
+    <div class="spec">
+      <div>
+        <div class="big">67%</div>
+        <div class="sml cap">Big Shoulders · The Monument</div>
+      </div>
+      <div>
+        <div class="mid">One line of judgment per slide, delivered like a summit radio call.</div>
+        <div class="sml cap">Instrument Sans · The Voice</div>
+      </div>
+      <div>
+        <div class="sml">Recovery · avg 7d<br>Target ≥ 66<br>Δ +9 vs last week</div>
+        <div class="sml cap" style="color:#4A5866">Geist Mono · The Notation</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label"><span class="mono">03 — Seven observations, one week</span><hr class="rule"></div>
+    <div class="week">
+      <div class="day on"><div class="bar" style="height:64%"></div><div class="d">MON</div></div>
+      <div class="day on"><div class="bar" style="height:76%"></div><div class="d">TUE</div></div>
+      <div class="day warn"><div class="bar" style="height:34%"></div><div class="d">WED</div></div>
+      <div class="day on"><div class="bar" style="height:82%"></div><div class="d">THU</div></div>
+      <div class="day"><div class="bar" style="height:48%"></div><div class="d">FRI</div></div>
+      <div class="day on"><div class="bar" style="height:88%"></div><div class="d">SAT</div></div>
+      <div class="day on"><div class="bar" style="height:97%"></div><div class="d">SUN</div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span class="mono">APEX COACHING · PERFORMANCE RECORDS DIVISION</span>
+    <span class="mono" style="color:#2EE6A8">EST. 2026</span>
+  </div>
+
+</body>
+</html>
