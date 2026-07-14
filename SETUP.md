@@ -35,7 +35,7 @@ setup, most of it account signups.
 ## 4. Install
 
 ```
-git clone <REPO_URL> health-coach
+git clone https://github.com/jacobhead031/whoop-health-coach.git health-coach
 cd health-coach
 ./install.sh
 ```
